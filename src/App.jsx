@@ -3,6 +3,7 @@ import './App.css'
 import Sidebar from './assets/components/sidebar/Sidebar'
 import Step1 from './assets/components/step1/Step1'
 import Step2 from './assets/components/step2/Step2'
+import Step3 from './assets/components/step3/Step3'
 
 function App() {
 
@@ -22,7 +23,6 @@ function App() {
           </div>
 
           <div className="div-content">
-
             {stepSelected === "step1" && 
               <Step1 setStepSelected={setStepSelected} nom={nom} setNom={setNom} email={email} setEmail={setEmail} phone={phone} setPhone={setPhone} />
             }
@@ -30,6 +30,9 @@ function App() {
               <Step2 setStepSelected={setStepSelected} frequency={frequency} setFrequency={setFrequency} plan={plan} setPlan={setPlan} />
             }
 
+            {stepSelected === "step3" && 
+              <Step3 setStepSelected={setStepSelected} />
+            }
           </div>
 
         </div>

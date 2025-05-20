@@ -1,0 +1,7 @@
+.addon {
+    border: 1px solid hsla(231, 11%, 63%, 0.29);
+}
+
+.addon:hover {
+    border-color: hsl(243, 100%, 62%);
+}
