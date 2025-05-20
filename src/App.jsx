@@ -4,6 +4,7 @@ import Sidebar from './assets/components/sidebar/Sidebar'
 import Step1 from './assets/components/step1/Step1'
 import Step2 from './assets/components/step2/Step2'
 import Step3 from './assets/components/step3/Step3'
+import Step4 from './assets/components/step4/Step4'
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
   const [phone, setPhone] = useState()
   const [frequency, setFrequency] = useState("monthly")
   const [plan, setPlan] = useState()
-  const [isChecked, setIsChecked] = useState(false)
+  const [isChecked, setIsChecked] = useState()
 
   return (
 
@@ -33,6 +34,10 @@ function App() {
 
             {stepSelected === "step3" && 
               <Step3 setStepSelected={setStepSelected} isChecked={isChecked} setIsChecked={setIsChecked} />
+            }
+
+            {stepSelected === "step4" && 
+              <Step4 setStepSelected={setStepSelected} isChecked={isChecked} plan={plan} frequency={frequency} />
             }
           </div>
 
