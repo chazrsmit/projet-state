@@ -9,3 +9,15 @@
 h6 {
     color: hsl(213, 96%, 18%);
 }
+
+.choice-btn {
+    background-color: hsl(213, 96%, 18%);
+    height: 20px;
+    width: 40px;
+    border-radius: 20px;
+}
+
+.choice-freq {
+    background-color: hsl(206, 94%, 87%);
+    border-radius: 3px;
+}

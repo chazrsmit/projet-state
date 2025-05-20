@@ -15,7 +15,6 @@ export default function Step2() {
                 </div>
 
                 <div className="step2-cards d-flex gap-2">
-
                     <div className="stp-card d-flex flex-column justify-content-between">
                         <div className="img-card">
                             <img src="../../../../public/arcade.svg" alt="" />
@@ -41,10 +40,17 @@ export default function Step2() {
                             <img src="../../../../public/pro.svg" alt="" />
                         </div>
                         <div className="infos-plan">
-                            <h6 className="p-0 m-0">Pro</h6>
+                            <h6>Pro</h6>
                             <p>$9/mo</p>
                         </div>
                     </div>
+                </div>
+
+                <div className="choice-freq d-flex justify-content-around align-items-center p-2">
+                    <h6>Monthly</h6>
+                    <div className="choice-btn"></div>
+                    <h6>Yearly</h6>
+
 
                 </div>
 
@@ -52,7 +58,8 @@ export default function Step2() {
 
             <div className="step2-part2">
 
-                <div className="div-button border d-flex justify-content-end">
+                <div className="div-button border d-flex justify-content-between">
+                    <button>Previous</button>
                     <button onClick={() => setStepSelected("step3")}>Next step</button>
                 </div>
             </div>
