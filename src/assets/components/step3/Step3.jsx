@@ -22,11 +22,16 @@ export default function Step3({ setStepSelected, isChecked, setIsChecked }) {
                     <div className="addon d-flex justify-content-between p-2 rounded-2 flex-grow-1 px-3">
                         <div className="d-flex gap-3">
                             <input type="checkbox" id="online" name="online"
+                            checked={isChecked.includes("online")}
                             onChange={(e) => {
-                            const { id, checked } = e.target;
+                            // On sélectionne les attributs 'id' et 'checked' du e.target 
+                            const id = e.target.id;
+                            const checked = e.target.checked;
                             if (checked) {
+                            // Si l'élément est checked, alors on va ajouter son id à la liste déjà existante isChecked (...isChecked crée une copie de la liste existante) 
                             setIsChecked([...isChecked, id]);
                             } else {
+                            // Si l'élement est unchecked, on va utiliser la méthode filter (qui ne marche qu'avec des array) pour retirer tout item qui a le même id que l'élément unchecked (= on ne veut dans la lste que des items qui ont un id différent de l'élément unchecked)
                             setIsChecked(isChecked.filter(item => item !== id));
                             }
                             }}
@@ -44,7 +49,9 @@ export default function Step3({ setStepSelected, isChecked, setIsChecked }) {
                     <div className="addon d-flex justify-content-between p-2 rounded-2 flex-grow-1 px-3">
                         <div className="d-flex gap-3">
                             <input type="checkbox" id="larger" name="larger"
+                            checked={isChecked.includes("larger")}
                             onChange={(e) => {
+                            // Manière plus clean d'écrire la sélection de l'id et du checked 
                             const { id, checked } = e.target;
                             if (checked) {
                             setIsChecked([...isChecked, id]);
@@ -66,6 +73,8 @@ export default function Step3({ setStepSelected, isChecked, setIsChecked }) {
                     <div className="addon d-flex justify-content-between p-2 rounded-2 flex-grow-1 px-3">
                         <div className="d-flex gap-3">
                             <input type="checkbox" id="custom" name="custom"
+                            // pour que l'élément reste checked, on doit lier l'attribut checked à son id se trouvant dans l'array isChecked :
+                            checked={isChecked.includes("custom")}
                             onChange={(e) => {
                             const { id, checked } = e.target;
                             if (checked) {
