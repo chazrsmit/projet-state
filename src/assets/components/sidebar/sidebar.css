@@ -19,12 +19,9 @@
     align-items: center;
 }
 
-.pa-1 {
-    /* border-radius: 50%;
-    border: 1px solid white;
-    width: 30px;
-    height: 29px;
-    text-align: center; */
+.wrap-number.selected {
+    background-color: white;
+    color: black;
 }
 
 .pa-2 {

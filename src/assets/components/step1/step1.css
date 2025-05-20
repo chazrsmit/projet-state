@@ -1,0 +1,17 @@
+.div-step1 {
+    padding: 30px;
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+
+.div-step1 h3 {
+    color: hsl(213, 96%, 18%);
+    font-weight: bold;
+}
+
+.div-step1 p {
+    color : hsl(231, 11%, 63%);
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
