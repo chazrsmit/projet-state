@@ -20,8 +20,10 @@
 
 @media (min-width: 1024px) {
     .div-step1 {
-        padding-left: 40px;
-        padding-top: 40px;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 50px;
+        /* border: 1px solid red; */
     }
 }
 

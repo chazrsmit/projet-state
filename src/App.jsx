@@ -2,7 +2,7 @@ import { use, useState } from 'react'
 import './App.css'
 import Sidebar from './assets/components/sidebar/Sidebar'
 import Step1 from './assets/components/step1/Step1'
-
+import Step2 from './assets/components/step2/Step2'
 
 function App() {
 
@@ -13,8 +13,6 @@ function App() {
 
   return (
 
-
-
         <div className="div-all">
 
           <div className="div-sidebar">
@@ -22,12 +20,17 @@ function App() {
           </div>
 
           <div className="div-content">
-            <Step1 setStepSelected={setStepSelected} nom={nom} setNom={setNom} email={email} setEmail={setEmail} phone={phone} setPhone={setPhone} />
+
+            {stepSelected === "step1" && 
+              <Step1 setStepSelected={setStepSelected} nom={nom} setNom={setNom} email={email} setEmail={setEmail} phone={phone} setPhone={setPhone} />
+            }
+            {stepSelected === "step2" && 
+              <Step2 setStepSelected={setStepSelected} nom={nom} setNom={setNom} email={email} setEmail={setEmail} phone={phone} setPhone={setPhone} />
+            }
+
           </div>
 
         </div>
-
-
 
   )
 }

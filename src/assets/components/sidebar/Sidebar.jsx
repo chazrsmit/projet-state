@@ -19,7 +19,7 @@ export default function Sidebar({ stepSelected }) {
 
             <div className="div-step d-flex gap-3">
                 <div className="div-number">
-                    <div className="wrap-number">
+                    <div className={`wrap-number ${stepSelected === "step2" ? "selected" : ""}`}>
                         <p className="pa-1">2</p>
                     </div>
                 </div>
@@ -31,7 +31,7 @@ export default function Sidebar({ stepSelected }) {
 
             <div className="div-step d-flex gap-3">
                 <div className="div-number">
-                    <div className="wrap-number">
+                    <div className={`wrap-number ${stepSelected === "step3" ? "selected" : ""}`}>
                         <p className="pa-1">3</p>
                     </div>
                 </div>
@@ -43,7 +43,7 @@ export default function Sidebar({ stepSelected }) {
 
             <div className="div-step d-flex gap-3">
                 <div className="div-number">
-                    <div className="wrap-number">
+                    <div className={`wrap-number ${stepSelected === "step4" ? "selected" : ""}`}>
                         <p className="pa-1">4</p>
                     </div>
                 </div>

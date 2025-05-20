@@ -1,0 +1,7 @@
+.stp-card {
+    flex: 1;
+    height: 130px;
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid hsl(229, 24%, 87%);
+}
