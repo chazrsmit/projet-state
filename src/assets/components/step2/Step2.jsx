@@ -1,7 +1,7 @@
 import './step2.css'
 
 
-export default function Step2() {
+export default function Step2({ frequency, setFrequency }) {
 
     return(
 
@@ -20,7 +20,7 @@ export default function Step2() {
                             <img src="../../../../public/arcade.svg" alt="" />
                         </div>
                         <div className="infos-plan">
-                            <h6 className="p-0 m-0">Arcade</h6>
+                            <h6 className="h6-plan">Arcade</h6>
                             <p>$9/mo</p>
                         </div>
                     </div>
@@ -30,7 +30,7 @@ export default function Step2() {
                             <img src="../../../../public/advenced.svg" alt="" />
                         </div>
                         <div className="infos-plan">
-                            <h6 className="p-0 m-0">Advanced</h6>
+                            <h6 className="h6-plan">Advanced</h6>
                             <p>$9/mo</p>
                         </div>
                     </div>
@@ -40,18 +40,18 @@ export default function Step2() {
                             <img src="../../../../public/pro.svg" alt="" />
                         </div>
                         <div className="infos-plan">
-                            <h6>Pro</h6>
+                            <h6 className="h6-plan">Pro</h6>
                             <p>$9/mo</p>
                         </div>
                     </div>
                 </div>
 
                 <div className="choice-freq d-flex justify-content-around align-items-center p-2">
-                    <h6>Monthly</h6>
-                    <div className={`choice-btn d-flex align-items-center`}>
+                    <h6 className="h6-freq">Monthly</h6>
+                    <div className={`choice-btn d-flex align-items-center ${frequency === "monthly" ? 'justify-content-left' : "" }`}>
                         <div className="slide-choice-btn"></div>
                     </div>
-                    <h6>Yearly</h6>
+                    <h6 className="h6-freq">Yearly</h6>
 
 
                 </div>

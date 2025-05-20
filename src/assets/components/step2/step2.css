@@ -10,7 +10,7 @@
 
 h6 {
     color: hsl(213, 96%, 18%);
-    font-size: clamp(14px, 1vw + 0.2rem, 24px);
+    font-size: clamp(14px, 1vw + 0.1rem, 24px);
 }
 
 .choice-btn {
@@ -31,6 +31,14 @@ h6 {
 .slide-choice-btn {
     height: 14px;
     width: 14px;
-    background-color: antiquewhite;
+    background-color: white;
     border-radius: 50%;
+}
+
+.h6-plan {
+    color: hsl(243, 100%, 62%);
+}
+
+.h6-freq {
+   
 }

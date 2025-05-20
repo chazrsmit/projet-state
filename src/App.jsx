@@ -10,6 +10,7 @@ function App() {
   const [nom, setNom] = useState()
   const [email, setEmail] = useState()
   const [phone, setPhone] = useState()
+  const [frequency, setFrequency] = useState("monthly")
 
   return (
 
@@ -25,7 +26,7 @@ function App() {
               <Step1 setStepSelected={setStepSelected} nom={nom} setNom={setNom} email={email} setEmail={setEmail} phone={phone} setPhone={setPhone} />
             }
             {stepSelected === "step2" && 
-              <Step2 setStepSelected={setStepSelected} nom={nom} setNom={setNom} email={email} setEmail={setEmail} phone={phone} setPhone={setPhone} />
+              <Step2 setStepSelected={setStepSelected} nom={nom} setNom={setNom} email={email} setEmail={setEmail} phone={phone} setPhone={setPhone} frequency={frequency} setFrequency={setFrequency} />
             }
 
           </div>
