@@ -30,7 +30,7 @@ body {
   background-color: white;
   border-radius: 10px;
   width: 80vw;
-  height: 80vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   padding: 12px;
@@ -47,6 +47,9 @@ body {
   box-sizing: border-box;
   padding: 30px;
   padding-top: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .div-content {
