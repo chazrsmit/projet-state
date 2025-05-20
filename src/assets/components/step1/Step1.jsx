@@ -6,12 +6,12 @@ export default function Step1({ setStepSelected, nom, setNom, email, setEmail, p
 
         <div className="div-step1">
 
-                <div className="step-texts border">
+                <div className="step-texts">
                     <h3>Personal info</h3>
                     <p>Please provide your name, phone number and email adress.</p>
                 </div>
 
-                <form className="border">
+                <form className="">
                     <label htmlFor="name">Your name is: {nom}</label><br/>
                     {/* on dit que lorsque l'on change la valeur de cet input, on change l'état de notre variable nom (car la valeur de cet input est le nom entré par l'utilisateur). On utilise un e.target pour bien sélectionner cet input. */}
                     <input className="w-100" type="text" id="nom" value={nom} onChange={(e) => setNom(e.target.value)} placeholder='Vingt-six' /><br/>
@@ -21,7 +21,7 @@ export default function Step1({ setStepSelected, nom, setNom, email, setEmail, p
                     <input className="w-100" type="tel" id="phone" value={phone} onChangeCapture={(e) => setPhone(e.target.value)} placeholder='e.g. +1 234 567 890' />
                 </form>
 
-                <div className="div-button border d-flex justify-content-end">
+                <div className="div-button d-flex justify-content-end">
                     <button onClick={() => setStepSelected("step2")}>Next step</button>
                 </div>
 

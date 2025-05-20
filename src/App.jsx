@@ -18,24 +18,25 @@ function App() {
   const [montant, setMontant] = useState(0)
 
   // Comme je n'ai pas créé un json ou d'objets pur chaque type de plan, il faut entrer manuellement les différents totaux possibles en fonction du choix de l'user.
-  // Plan choisi
+  // Plan choisi :
   const totalPlan = () => {
-  if (frequency === "monthly") {
-    switch (plan) {
-      case "arcade": return 9;
-      case "advanced": return 12;
-      case "pro": return 15;
-      default: return 0;
+  // On va calculer en fonction de la fréquence : "monthly" / "yearly"
+    if (frequency === "monthly") {
+      switch (plan) {
+        case "arcade": return 9;
+        case "advanced": return 12;
+        case "pro": return 15;
+        default: return 0;
+        }
       }
-    }
-  if (frequency === "yearly") {
-    switch (plan) {
-      case "arcade": return 90;
-      case "advanced": return 120;
-      case "pro": return 150;
-      default: return 0;
+    if (frequency === "yearly") {
+      switch (plan) {
+        case "arcade": return 90;
+        case "advanced": return 120;
+        case "pro": return 150;
+        default: return 0;
+        }
       }
-    }
   }
 
   // Maintenant il faut calculer les add-ons.
@@ -44,12 +45,11 @@ function App() {
     let addonsTotal = 0;
 
     isChecked.forEach(addon => {
-        if (frequency === "monthly") {
-          if (addon === "online") addonsTotal += 1;
-          if (addon === "larger") addonsTotal += 2;
-          if (addon === "custom") addonsTotal += 2;
-        }
-      })
+      if (addon === "online") addonsTotal += 1;
+      if (addon === "larger") addonsTotal += 2;
+      if (addon === "custom") addonsTotal += 2;
+    })
+
     return addonsTotal;
   }
 
