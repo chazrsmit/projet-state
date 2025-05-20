@@ -1,0 +1,39 @@
+.div-number {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.div-name-step {
+    flex: 3;
+}
+
+.wrap-number {
+    border-radius: 50%;
+    border: 1px solid white;
+    width: 34px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pa-1 {
+    /* border-radius: 50%;
+    border: 1px solid white;
+    width: 30px;
+    height: 29px;
+    text-align: center; */
+}
+
+.pa-2 {
+    color: hsl(229, 24%, 87%);
+    font-weight: 400;
+    font-size: 0.66rem;
+}
+
+.pa-3 {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
