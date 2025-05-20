@@ -47,11 +47,13 @@ export default function Step2({ frequency, setFrequency }) {
                 </div>
 
                 <div className="choice-freq d-flex justify-content-around align-items-center p-2">
-                    <h6 className="h6-freq">Monthly</h6>
-                    <div className={`choice-btn d-flex align-items-center ${frequency === "monthly" ? 'justify-content-left' : "" }`}>
+                    <h6 className="h6-freq" onClick={() => setFrequency("monthly")}>Monthly</h6>
+                    <div className={`choice-btn d-flex align-items-center
+                    ${frequency === "monthly" ? 'justify-content-left' : "justify-content-end" }
+                    `}>
                         <div className="slide-choice-btn"></div>
                     </div>
-                    <h6 className="h6-freq">Yearly</h6>
+                    <h6 className="h6-freq" onClick={() => setFrequency("yearly")}>Yearly</h6>
 
 
                 </div>
