@@ -4,20 +4,33 @@
     padding: 8px;
     border-radius: 10px;
     border: 1px solid hsl(229, 24%, 87%);
+    /* à éventuellement enlever si ça fait des bugs en responsive : */
+    min-width: 50px;
 }
 
 h6 {
     color: hsl(213, 96%, 18%);
+    font-size: clamp(14px, 1vw + 0.2rem, 24px);
 }
 
 .choice-btn {
     background-color: hsl(213, 96%, 18%);
-    height: 20px;
-    width: 40px;
+    height: 18px;
+    width: 35px;
     border-radius: 20px;
+    padding: 2px;
 }
 
 .choice-freq {
     background-color: hsl(206, 94%, 87%);
     border-radius: 3px;
+    box-sizing: border-box;
+}
+
+
+.slide-choice-btn {
+    height: 14px;
+    width: 14px;
+    background-color: antiquewhite;
+    border-radius: 50%;
 }

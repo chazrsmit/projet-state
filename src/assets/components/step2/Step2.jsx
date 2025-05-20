@@ -48,7 +48,9 @@ export default function Step2() {
 
                 <div className="choice-freq d-flex justify-content-around align-items-center p-2">
                     <h6>Monthly</h6>
-                    <div className="choice-btn"></div>
+                    <div className={`choice-btn d-flex align-items-center`}>
+                        <div className="slide-choice-btn"></div>
+                    </div>
                     <h6>Yearly</h6>
 
 
