@@ -13,8 +13,56 @@ function App() {
   const [email, setEmail] = useState()
   const [phone, setPhone] = useState()
   const [frequency, setFrequency] = useState("monthly")
-  const [plan, setPlan] = useState()
-  const [isChecked, setIsChecked] = useState()
+  const [plan, setPlan] = useState("arcade")
+  const [isChecked, setIsChecked] = useState([])
+  const [montant, setMontant] = useState(0)
+
+  // Comme je n'ai pas créé un json ou d'objets pur chaque type de plan, il faut entrer manuellement les différents totaux possibles en fonction du choix de l'user.
+  // Plan choisi
+  const totalPlan = () => {
+  if (frequency === "monthly") {
+    switch (plan) {
+      case "arcade": return 9;
+      case "advanced": return 12;
+      case "pro": return 15;
+      default: return 0;
+      }
+    }
+  if (frequency === "yearly") {
+    switch (plan) {
+      case "arcade": return 90;
+      case "advanced": return 120;
+      case "pro": return 150;
+      default: return 0;
+      }
+    }
+  }
+
+  // Maintenant il faut calculer les add-ons.
+  const totalAddons = () => {
+
+    let addonsTotal = 0;
+
+    isChecked.forEach(addon => {
+        if (frequency === "monthly") {
+          if (addon === "online") addonsTotal += 1;
+          if (addon === "larger") addonsTotal += 2;
+          if (addon === "custom") addonsTotal += 2;
+        }
+      })
+    return addonsTotal;
+  }
+
+  // Et le total avec les 2 :
+
+  const fullTotal = () => {
+    const a = totalPlan()
+    const b = totalAddons()
+    return a + b
+  }
+
+
+
 
   return (
 
@@ -37,7 +85,7 @@ function App() {
             }
 
             {stepSelected === "step4" && 
-              <Step4 setStepSelected={setStepSelected} isChecked={isChecked} plan={plan} frequency={frequency} />
+              <Step4 setStepSelected={setStepSelected} isChecked={isChecked} plan={plan} frequency={frequency} fullTotal={fullTotal} />
             }
           </div>
 
