@@ -13,6 +13,7 @@ function App() {
   const [phone, setPhone] = useState()
   const [frequency, setFrequency] = useState("monthly")
   const [plan, setPlan] = useState()
+  const [isChecked, setIsChecked] = useState(false)
 
   return (
 
@@ -31,7 +32,7 @@ function App() {
             }
 
             {stepSelected === "step3" && 
-              <Step3 setStepSelected={setStepSelected} />
+              <Step3 setStepSelected={setStepSelected} isChecked={isChecked} setIsChecked={setIsChecked} />
             }
           </div>
 

@@ -1,6 +1,6 @@
 import './step3.css'
 
-export default function Step3({ setStepSelected }) {
+export default function Step3({ setStepSelected, isChecked, setIsChecked }) {
 
 
     return (
@@ -17,7 +17,7 @@ export default function Step3({ setStepSelected }) {
 
                     <div className="addon d-flex justify-content-between p-2 rounded-2 flex-grow-1 px-3">
                         <div className="d-flex gap-3">
-                            <input type="checkbox" id="online" name="online" />
+                            <input type="checkbox" id="online" name="online" checked={isChecked} onChange={(e) => setIsChecked(e.target.checked)} />
                             <div>
                                 <h6>Online services</h6>
                                 <p>Access to multiplayer games</p>
@@ -30,7 +30,7 @@ export default function Step3({ setStepSelected }) {
 
                     <div className="addon d-flex justify-content-between p-2 rounded-2 flex-grow-1 px-3">
                         <div className="d-flex gap-3">
-                            <input type="checkbox" id="online" name="online" />
+                            <input type="checkbox" id="online" name="online" checked={isChecked} onChange={(e) => setIsChecked(e.target.checked)} />
                             <div>
                                 <h6>Larger storage  </h6>
                                 <p>Extra 1TB of cloud save</p>
@@ -43,7 +43,7 @@ export default function Step3({ setStepSelected }) {
 
                     <div className="addon d-flex justify-content-between p-2 rounded-2 flex-grow-1 px-3">
                         <div className="d-flex gap-3">
-                            <input type="checkbox" id="online" name="online" />
+                            <input type="checkbox" id="online" name="online" checked={isChecked} onChange={(e) => setIsChecked(e.target.checked)} />
                             <div>
                                 <h6>Customizable profile</h6>
                                 <p>Custom theme on your profile</p>
