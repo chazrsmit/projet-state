@@ -1,7 +1,7 @@
 import './step2.css'
 
 
-export default function Step2({ frequency, setFrequency }) {
+export default function Step2({ stepSelected, setStepSelected, frequency, setFrequency, plan, setPlan }) {
 
     return(
 
@@ -15,33 +15,48 @@ export default function Step2({ frequency, setFrequency }) {
                 </div>
 
                 <div className="step2-cards d-flex gap-2">
-                    <div className="stp-card d-flex flex-column justify-content-between">
-                        <div className="img-card">
+                    <div id="arcade" className={`stp-card d-flex flex-column justify-content-between ${plan === "arcade" ? "selected" : ""} `} onClick={(e) => setPlan(e.currentTarget.id)}>
+                        <div id="arcade" className="img-card">
                             <img src="../../../../public/arcade.svg" alt="" />
                         </div>
-                        <div className="infos-plan">
+                        <div id="arcade" className="infos-plan">
                             <h6 className="h6-plan">Arcade</h6>
-                            <p>$9/mo</p>
+                            {frequency === "monthly" && 
+                                <p>$9/mo</p>
+                            }
+                            {frequency === "yearly" && 
+                                <p>$90/yr</p>
+                            }
                         </div>
                     </div>
 
-                    <div className="stp-card d-flex flex-column justify-content-between">
-                        <div className="img-card">
+                    <div id="advanced" className={`stp-card d-flex flex-column justify-content-between ${plan === "advanced" ? "selected" : ""} `} onClick={(e) => setPlan(e.currentTarget.id)}>
+                        <div id="advanced" className="img-card">
                             <img src="../../../../public/advenced.svg" alt="" />
                         </div>
-                        <div className="infos-plan">
+                        <div id="advanced" className="infos-plan">
                             <h6 className="h6-plan">Advanced</h6>
-                            <p>$9/mo</p>
+                            {frequency === "monthly" && 
+                                <p>$12/mo</p>
+                            }
+                            {frequency === "yearly" && 
+                                <p>$120/yr</p>
+                            }
                         </div>
                     </div>
 
-                    <div className="stp-card d-flex flex-column justify-content-between">
-                        <div className="img-card">
+                    <div id="pro" className={`stp-card d-flex flex-column justify-content-between ${plan === "pro" ? "selected" : ""} `} onClick={(e) => setPlan(e.currentTarget.id)}>
+                        <div id="pro" className="img-card">
                             <img src="../../../../public/pro.svg" alt="" />
                         </div>
-                        <div className="infos-plan">
+                        <div id="pro" className="infos-plan">
                             <h6 className="h6-plan">Pro</h6>
-                            <p>$9/mo</p>
+                            {frequency === "monthly" && 
+                                <p>$15/mo</p>
+                            }
+                            {frequency === "yearly" && 
+                                <p>$150/yr</p>
+                            }
                         </div>
                     </div>
                 </div>
@@ -63,7 +78,7 @@ export default function Step2({ frequency, setFrequency }) {
             <div className="step2-part2">
 
                 <div className="div-button border d-flex justify-content-between">
-                    <button>Previous</button>
+                    <button onClick={() => setStepSelected("step1")}>Previous</button>
                     <button onClick={() => setStepSelected("step3")}>Next step</button>
                 </div>
             </div>

@@ -8,6 +8,16 @@
     min-width: 50px;
 }
 
+.stp-card:hover {
+    border-color: hsl(243, 100%, 62%);
+}
+
+.stp-card.selected {
+    background-color: hsl(230, 17%, 86%);
+    border-color: hsl(243, 100%, 62%);
+
+}
+
 h6 {
     color: hsl(213, 96%, 18%);
     font-size: clamp(14px, 1vw + 0.1rem, 24px);
