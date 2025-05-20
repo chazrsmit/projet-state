@@ -15,12 +15,15 @@ function App() {
   const [frequency, setFrequency] = useState("monthly")
   const [plan, setPlan] = useState("arcade")
   const [isChecked, setIsChecked] = useState([])
-  const [montant, setMontant] = useState(0)
+
+  // // CALCUL DU TOTAL // //
 
   // Comme je n'ai pas créé un json ou d'objets pur chaque type de plan, il faut entrer manuellement les différents totaux possibles en fonction du choix de l'user.
+
   // Plan choisi :
   const totalPlan = () => {
-  // On va calculer en fonction de la fréquence : "monthly" / "yearly"
+
+  // On va calculer en fonction de la fréquence : "monthly" / "yearly" :
     if (frequency === "monthly") {
       switch (plan) {
         case "arcade": return 9;
@@ -39,17 +42,18 @@ function App() {
       }
   }
 
-  // Maintenant il faut calculer les add-ons.
+  // Maintenant il faut calculer les add-ons :
   const totalAddons = () => {
 
     let addonsTotal = 0;
 
     isChecked.forEach(addon => {
+      // On met + ou - car le montant est retiré si le addon n'est plus dans la liste.
       if (addon === "online") addonsTotal += 1;
       if (addon === "larger") addonsTotal += 2;
       if (addon === "custom") addonsTotal += 2;
     })
-
+    // Attention à ne pas oublier le return, sinon le montant ne s'enregistre pas !
     return addonsTotal;
   }
 
@@ -61,7 +65,7 @@ function App() {
     return a + b
   }
 
-
+  //// Pour calculer le montant total, j'ai donc créé trois fonctions const : la première pour enregistrer le plan choisi (en fonction des variables frequency et plan, en entrant manuellement les montants avec un switch case) ; la deuxième pour calculer les addons > un peu plus technique : comme les addons choisis sont contenus dans une liste/array, il faut utiliser des méthodes associées à des array. J'ai utilisé un forEach qui pour chaque addons se trouvant dans le array, va stocker son montant dans une variable let. Ensuite, on peut return le montant total des addons. 
 
 
   return (

@@ -1,7 +1,7 @@
 import './step2.css'
 
 
-export default function Step2({ stepSelected, setStepSelected, frequency, setFrequency, plan, setPlan }) {
+export default function Step2({ setStepSelected, frequency, setFrequency, plan, setPlan }) {
 
     return(
 

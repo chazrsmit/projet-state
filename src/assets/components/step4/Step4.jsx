@@ -68,7 +68,7 @@ export default function Step4({ setStepSelected, isChecked, plan, frequency, ful
                     {/* Montant total */}
                     <div className="total d-flex justify-content-between">
                         <p>Total per month</p>
-
+                    {/* Faire attention à ne pas oublier les parenthèses pour déclencher la fonction qui va effectuer le calcul.  */}
                         <h5>{fullTotal()}</h5>
                     </div>
 
