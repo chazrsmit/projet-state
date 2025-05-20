@@ -1,6 +1,5 @@
 .div-step1 {
     padding: 30px;
-    padding-left: 40px;
     box-sizing: border-box;
 }
 
@@ -13,5 +12,12 @@
     color : hsl(231, 11%, 63%);
     font-size: 0.7rem;
     font-weight: 500;
+}
+
+@media (min-width: 1024px) {
+    .div-step1 {
+        padding-left: 60px;
+        padding-top: 40px;
+    }
 }
 
