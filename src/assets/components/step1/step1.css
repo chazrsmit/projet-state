@@ -1,6 +1,10 @@
 .div-step1 {
     padding: 30px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .div-step1 h3 {
