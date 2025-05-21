@@ -117,7 +117,7 @@ function App() {
             }
 
             {stepSelected === "step4" && 
-              <Step4 setStepSelected={setStepSelected} isChecked={isChecked} plan={plan} frequency={frequency} fullTotal={fullTotal} lightMode={lightMode} />
+              <Step4 setStepSelected={setStepSelected} isChecked={isChecked} plan={plan} frequency={frequency} fullTotal={fullTotal} lightMode={lightMode} nom={nom} />
             }
 
             {stepSelected === "confirm" && 

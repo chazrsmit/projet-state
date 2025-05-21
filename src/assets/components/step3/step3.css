@@ -1,10 +1,17 @@
 .addon {
     border: 2px solid hsl(229, 24%, 87%);
     transition: all 0.2s;
+    border-radius: 10px;
 }
 
 .addon:hover {
     border: 2px solid #bf9cbe;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.13);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.1px);
+    -webkit-backdrop-filter: blur(11.1px);
 }
 
 .addon.selected {

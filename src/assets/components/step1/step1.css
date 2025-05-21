@@ -28,8 +28,6 @@
 
 /* .div-step1 p {
     color : hsl(231, 11%, 63%);
-    font-size: 0.7rem;
-    font-weight: 500;
 } */
 
 label {
@@ -50,6 +48,12 @@ input {
     font-size: 0.9rem;
 }
 
+input::placeholder {
+    font-size: 0.9rem;
+    color: hsl(231, 11%, 63%);
+}
+
+/* Quand l'user commence à taper */
 input[placeholder] {
     font-size: 0.9rem;
     transition: all 0.2s;
