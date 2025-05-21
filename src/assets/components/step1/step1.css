@@ -18,6 +18,29 @@
     font-weight: 500;
 }
 
+label {
+    color:  hsl(213, 96%, 18%);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+input {
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid hsl(229, 24%, 87%);
+    padding: 8px;
+    font-size: 0.9rem;
+}
+
+input[placeholder] {
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+input[placeholder]:focus {
+    border: 2px solid #bf9cbe;
+}
+
 @media (min-width: 1024px) {
     .div-step1 {
         padding-left: 60px;

@@ -73,6 +73,7 @@ body {
   background-color: transparent;
   font-weight: 600;
   color:hsl(213, 96%, 18%);
+  font-size: 0.8rem;
 }
 
 @media (min-width: 1024px) {
