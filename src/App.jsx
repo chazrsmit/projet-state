@@ -7,6 +7,9 @@ import Step3 from './assets/components/step3/Step3'
 import Step4 from './assets/components/step4/Step4'
 import Confirm from './assets/components/confirm/Confirm'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon } from '@fortawesome/free-solid-svg-icons';
+
 function App() {
 
   const [stepSelected, setStepSelected] = useState("step1")
@@ -17,6 +20,8 @@ function App() {
   const [plan, setPlan] = useState("arcade")
   // Array contenant les addons (attention à bien créer un array, car plusieurs addons peuvent être sélectionnés simultanément) :
   const [isChecked, setIsChecked] = useState([])
+  const [lightMode, setLightMode] = useState(false)
+
 
   // // CALCUL DU TOTAL // //
 
@@ -69,38 +74,55 @@ function App() {
 
   //// Pour calculer le montant total, j'ai donc créé trois fonctions const : la première pour enregistrer le plan choisi (en fonction des variables frequency et plan, en entrant manuellement les montants avec un switch case) ; la deuxième pour calculer les addons > un peu plus technique : comme les addons choisis sont contenus dans une liste/array, il faut utiliser des méthodes associées à des array. J'ai utilisé un forEach qui pour chaque addons se trouvant dans le array, va stocker son montant dans une variable let. Ensuite, on peut return le montant total des addons. 
 
+  const handleLight = () => {
+    if (!lightMode) {
+      setLightMode(true)
+      document.body.style.backgroundColor = "#3f35fe"
+      console.log("light mode on")
+    }
+
+    if (lightMode) {
+      setLightMode(false)
+      document.body.style.backgroundColor = "hsl(217, 100%, 97%)"
+      console.log("light mode off")
+    }
+  }
 
   return (
+<>
+        <div className="d-flex toggle-icon mb-2" onClick={handleLight}>
+            <FontAwesomeIcon className={`faMoon ${lightMode ? "light" : ""} `} icon={faMoon} />
+        </div>
 
-        <div className="div-all">
+        <div className={`div-all ${lightMode ? "light" : ""}`}>
 
           <div className="div-sidebar">
-            <Sidebar stepSelected={stepSelected} />
+            <Sidebar stepSelected={stepSelected} lightMode={lightMode} setLightMode={setLightMode} />
           </div>
 
           <div className="div-content">
             {stepSelected === "step1" && 
-              <Step1 setStepSelected={setStepSelected} nom={nom} setNom={setNom} email={email} setEmail={setEmail} phone={phone} setPhone={setPhone} />
+              <Step1 setStepSelected={setStepSelected} nom={nom} setNom={setNom} email={email} setEmail={setEmail} phone={phone} setPhone={setPhone} lightMode={lightMode} />
             }
             {stepSelected === "step2" && 
-              <Step2 setStepSelected={setStepSelected} frequency={frequency} setFrequency={setFrequency} plan={plan} setPlan={setPlan} />
+              <Step2 setStepSelected={setStepSelected} frequency={frequency} setFrequency={setFrequency} plan={plan} setPlan={setPlan} lightMode={lightMode} />
             }
 
             {stepSelected === "step3" && 
-              <Step3 setStepSelected={setStepSelected} isChecked={isChecked} setIsChecked={setIsChecked} />
+              <Step3 setStepSelected={setStepSelected} isChecked={isChecked} setIsChecked={setIsChecked} lightMode={lightMode} />
             }
 
             {stepSelected === "step4" && 
-              <Step4 setStepSelected={setStepSelected} isChecked={isChecked} plan={plan} frequency={frequency} fullTotal={fullTotal} />
+              <Step4 setStepSelected={setStepSelected} isChecked={isChecked} plan={plan} frequency={frequency} fullTotal={fullTotal} lightMode={lightMode} />
             }
 
             {stepSelected === "confirm" && 
-              <Confirm nom={nom} plan={plan} />
+              <Confirm nom={nom} plan={plan} lightMode={lightMode} />
             }
           </div>
 
         </div>
-
+</>
   )
 }
 

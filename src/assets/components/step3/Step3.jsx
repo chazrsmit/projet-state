@@ -1,6 +1,6 @@
 import './step3.css'
 
-export default function Step3({ setStepSelected, isChecked, setIsChecked }) {
+export default function Step3({ setStepSelected, isChecked, setIsChecked, lightMode }) {
 
     // const handleCheck = (e) => {
     //     setIsChecked(e.target.checked)
@@ -14,7 +14,7 @@ export default function Step3({ setStepSelected, isChecked, setIsChecked }) {
             <div className="step2-part1 d-flex flex-column gap-4">
 
                 <div className="step-texts">
-                    <h3>Pick add-ons</h3>
+                    <h3 className={` ${lightMode ? "light" : ""}`}>Pick add-ons</h3>
                     <p>Add-ons help enhance your gaming experience.</p>
                 </div>
                 <div className="addons-choice d-flex flex-column gap-2">

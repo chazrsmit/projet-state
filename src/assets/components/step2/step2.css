@@ -20,9 +20,22 @@
     border: 2px solid #bf9cbe;
 }
 
+.stp-card.selected.light {
+    background-color: #cde0ff;
+    border: 2px solid white;
+}
+
 h6 {
     color: hsl(213, 96%, 18%);
     font-size: clamp(14px, 1vw + 0.1rem, 24px);
+}
+
+.h6-plan.selected.light {
+    color:  hsl(213, 96%, 18%);
+}
+
+.h6-plan.light {
+    color: white;
 }
 
 .choice-btn {
@@ -37,6 +50,10 @@ h6 {
     background-color: hsl(217, 100%, 97%);
     border-radius: 3px;
     box-sizing: border-box;
+}
+
+.choice-freq.light {
+    background-color: #cde0ff;
 }
 
 .slide-choice-btn {
@@ -62,4 +79,12 @@ h6 {
 
 .infos-plan p {
     font-size:  clamp(10px, 1vw, 14px);
+}
+
+.infos-plan p.selected.light {
+    color:  hsl(213, 96%, 18%);
+}
+
+.infos-plan p.light {
+    color: white;
 }

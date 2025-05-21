@@ -1,6 +1,6 @@
 import './step4.css'
 
-export default function Step4({ setStepSelected, isChecked, plan, frequency, fullTotal }) {
+export default function Step4({ setStepSelected, isChecked, plan, frequency, fullTotal, lightMode }) {
 
     return (
 
@@ -9,7 +9,7 @@ export default function Step4({ setStepSelected, isChecked, plan, frequency, ful
             <div className="step2-part1 d-flex flex-column gap-4">
 
                 <div className="step-texts">
-                    <h3>Finishing up</h3>
+                    <h3 className={` ${lightMode ? "light" : ""}`}>Finishing up</h3>
                     <p>Double-check everything looks OK before confirming.</p>
                 </div>
 

@@ -1,7 +1,7 @@
 import './step2.css'
 
 
-export default function Step2({ setStepSelected, frequency, setFrequency, plan, setPlan }) {
+export default function Step2({ setStepSelected, frequency, setFrequency, plan, setPlan, lightMode }) {
 
     return(
 
@@ -10,58 +10,61 @@ export default function Step2({ setStepSelected, frequency, setFrequency, plan, 
             <div className="step2-part1 d-flex flex-column gap-3">
 
                 <div className="step-texts">
-                    <h3>Select your plan</h3>
+                    <h3 className={` ${lightMode ? "light" : ""}`}>Select your plan</h3>
                     <p>You have the option of monthly or yearly billing.</p>
                 </div>
 
                 <div className="step2-cards d-flex gap-2">
-                    <div id="arcade" className={`stp-card d-flex flex-column justify-content-between ${plan === "arcade" ? "selected" : ""} `} onClick={(e) => setPlan(e.currentTarget.id)}>
+                    <div id="arcade" className={`stp-card d-flex flex-column justify-content-between ${plan === "arcade" ? "selected" : ""}
+                    ${lightMode ? "light" : ""}`} onClick={(e) => setPlan(e.currentTarget.id)}>
                         <div id="arcade" className="img-card">
                             <img src="../../../../public/arcade.svg" alt="" />
                         </div>
                         <div id="arcade" className="infos-plan">
-                            <h6 className="h6-plan">Arcade</h6>
+                            <h6 className={`h6-plan ${lightMode ? "light" : ""} ${plan === "arcade" ? "selected" : ""}`}>Arcade</h6>
                             {frequency === "monthly" && 
-                                <p>$9/mo</p>
+                                <p className={`${lightMode ? "light" : ""} ${plan === "arcade" ? "selected" : ""}`}>$9/mo</p>
                             }
                             {frequency === "yearly" && 
-                                <p>$90/yr</p>
+                                <p className={`${lightMode ? "light" : ""} ${plan === "arcade" ? "selected" : ""}`}>$90/yr</p>
                             }
                         </div>
                     </div>
 
-                    <div id="advanced" className={`stp-card d-flex flex-column justify-content-between ${plan === "advanced" ? "selected" : ""} `} onClick={(e) => setPlan(e.currentTarget.id)}>
+                    <div id="advanced" className={`stp-card d-flex flex-column justify-content-between ${plan === "advanced" ? "selected" : ""}
+                     ${lightMode ? "light" : ""}`} onClick={(e) => setPlan(e.currentTarget.id)}>
                         <div id="advanced" className="img-card">
                             <img src="../../../../public/advenced.svg" alt="" />
                         </div>
                         <div id="advanced" className="infos-plan">
-                            <h6 className="h6-plan">Advanced</h6>
+                            <h6 className={`h6-plan ${lightMode ? "light" : ""} ${plan === "advanced" ? "selected" : ""}`}>Advanced</h6>
                             {frequency === "monthly" && 
-                                <p>$12/mo</p>
+                                <p className={`${lightMode ? "light" : ""} ${plan === "advanced" ? "selected" : ""}`}>$12/mo</p>
                             }
                             {frequency === "yearly" && 
-                                <p>$120/yr</p>
+                                <p className={`${lightMode ? "light" : ""} ${plan === "advanced" ? "selected" : ""}`}>$120/yr</p>
                             }
                         </div>
                     </div>
 
-                    <div id="pro" className={`stp-card d-flex flex-column justify-content-between ${plan === "pro" ? "selected" : ""} `} onClick={(e) => setPlan(e.currentTarget.id)}>
+                    <div id="pro" className={`stp-card d-flex flex-column justify-content-between ${plan === "pro" ? "selected" : ""} 
+                    ${lightMode ? "light" : ""}`} onClick={(e) => setPlan(e.currentTarget.id)}>
                         <div id="pro" className="img-card">
                             <img src="../../../../public/pro.svg" alt="" />
                         </div>
                         <div id="pro" className="infos-plan">
-                            <h6 className="h6-plan">Pro</h6>
+                            <h6 className={`h6-plan ${lightMode ? "light" : ""} ${plan === "pro" ? "selected" : ""}`}>Pro</h6>
                             {frequency === "monthly" && 
-                                <p>$15/mo</p>
+                                <p className={`${lightMode ? "light" : ""} ${plan === "pro" ? "selected" : ""}`}>$15/mo</p>
                             }
                             {frequency === "yearly" && 
-                                <p>$150/yr</p>
+                                <p className={`${lightMode ? "light" : ""} ${plan === "pro" ? "selected" : ""}`}>$150/yr</p>
                             }
                         </div>
                     </div>
                 </div>
 
-                <div className="choice-freq d-flex justify-content-around align-items-center p-2">
+                <div className={`choice-freq d-flex justify-content-around align-items-center p-2 ${lightMode ? "light" : ""}`}>
                     <h6 className={`h6-freq ${frequency === "monthly" ? "select" : ""}`} onClick={() => setFrequency("monthly")}>Monthly</h6>
                     <div className={`choice-btn d-flex align-items-center
                     ${frequency === "monthly" ? 'justify-content-left' : "justify-content-end" }
@@ -77,8 +80,8 @@ export default function Step2({ setStepSelected, frequency, setFrequency, plan, 
 
             <div className="step2-part2">
                 <div className="div-button d-flex justify-content-between">
-                    <button className="btn-prev" onClick={() => setStepSelected("step1")}>Go back</button>
-                    <button className="btn-bleu" onClick={() => setStepSelected("step3")}>Next step</button>
+                    <button className={`btn-prev ${lightMode ? "light" : ""}`} onClick={() => setStepSelected("step1")}>Go back</button>
+                    <button className={`btn-bleu ${lightMode ? "light" : ""}`} onClick={() => setStepSelected("step3")}>Next step</button>
                 </div>
             </div>
 

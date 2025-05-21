@@ -9,6 +9,10 @@
     font-weight: bold;
 }
 
+.confirmation h2.light {
+    color: white;
+}
+
 .confirmation span:first-of-type {
     color: hsl(213, 96%, 18%);
     font-weight: 600;

@@ -81,8 +81,18 @@ body {
   transition: 0.2s all;
 }
 
+.btn-bleu.light {
+  background-color: white;
+  color:hsl(214, 90%, 16%);
+}
+
 .btn-bleu:hover {
   background-color: hsl(213, 95%, 24%);
+}
+
+.btn-bleu:hover.light {
+  background-color: white;
+  color:hsl(243, 100%, 62%);
 }
 
 #btn-confirm:hover {
@@ -94,8 +104,22 @@ body {
   border: none;
   background-color: transparent;
   font-weight: 600;
-  color:hsl(213, 96%, 18%);
+  color: hsl(213, 96%, 18%);
   font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.btn-prev.light {
+  color: white;
+}
+
+.btn-prev:hover.light {
+  color: hsl(243, 100%, 62%);
+}
+
+.toggle-icon {
+  position: relative;
+  top: 0px;
 }
 
 @media (min-width: 1024px) {
@@ -104,6 +128,24 @@ body {
     height: 60vh;
     flex-direction: row;
   }
-  .div-sidebar {
+}
+
+/* Light mode */
+
+.toggle-icon {
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .toggle-icon {
+    justify-content: start;
   }
+}
+
+.faMoon.light {
+  color: white;
+}
+
+.div-all.light {
+  background-color: hsl(214, 90%, 16%);
 }

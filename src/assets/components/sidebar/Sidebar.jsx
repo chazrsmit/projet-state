@@ -1,11 +1,14 @@
-import './sidebar.css'
+import './sidebar.css';
 
-export default function Sidebar({ stepSelected }) {
+
+export default function Sidebar({ stepSelected, lightMode, setLightMode }) {
+
 
     return(
 
         <>
-            <div className="div-step d-flex gap-3">
+
+            <div className="d-flex gap-3">
                 <div className="div-number">
                     <div className={`wrap-number ${stepSelected === "step1" ? "selected" : ""}`}>
                         <p className="pa-1">1</p>
