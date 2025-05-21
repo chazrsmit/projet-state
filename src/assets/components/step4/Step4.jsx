@@ -10,7 +10,7 @@ export default function Step4({ setStepSelected, isChecked, plan, frequency, ful
 
                 <div className="step-texts">
                     <h3 className={` ${lightMode ? "light" : ""}`}>Finishing up</h3>
-                    <p>Double-check everything looks OK before confirming.</p>
+                    <p className={`${lightMode ? "light" : ""}`}>Double-check everything looks OK before confirming.</p>
                 </div>
 
                 <div>
@@ -19,7 +19,7 @@ export default function Step4({ setStepSelected, isChecked, plan, frequency, ful
                         <div className="selection d-flex justify-content-between">
                             <div>
                                 <h6 style={{textTransform: 'capitalize'}}>{plan} ({frequency})</h6>
-                                <p onClick={() => setStepSelected("step2")}>Change</p>
+                                <p  onClick={() => setStepSelected("step2")}>Change</p>
                             </div>
                             <div>
                                 {/* Pour que ce soit plus dynamique c'aurait été mieux de créer un data json ou créer des objets afin d'associer à chaque type de plan une fréquence et un prix, mais ici je vais faire ça manuellement. */}
@@ -67,9 +67,9 @@ export default function Step4({ setStepSelected, isChecked, plan, frequency, ful
 
                     {/* Montant total */}
                     <div className="total d-flex justify-content-between">
-                        <p>Total per month</p>
+                        <p className={`${lightMode ? "light" : ""}`}>Total per month</p>
                     {/* Faire attention à ne pas oublier les parenthèses pour déclencher la fonction qui va effectuer le calcul.  */}
-                        <h5 className="h5-total">${fullTotal()}</h5>
+                        <h5 className={`h5-total ${lightMode ? "light" : ""}`}>${fullTotal()}</h5>
                     </div>
 
                 </div>
@@ -78,8 +78,8 @@ export default function Step4({ setStepSelected, isChecked, plan, frequency, ful
 
             <div className="step2-part2">
                 <div className="div-button d-flex justify-content-between">
-                    <button className="btn-prev" onClick={() => setStepSelected("step3")}>Previous</button>
-                    <button id="btn-confirm" className="btn-bleu" onClick={() => setStepSelected("confirm")}>Confirm</button>
+                    <button className={`btn-prev ${lightMode ? "light" : ""}`} onClick={() => setStepSelected("step3")}>Go back</button>
+                    <button id="btn-confirm" className={`btn-bleu ${lightMode ? "light" : ""}`} onClick={() => setStepSelected("confirm")}>Confirm</button>
                 </div>
             </div>
 

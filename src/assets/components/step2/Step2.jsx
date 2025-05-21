@@ -1,7 +1,16 @@
 import './step2.css'
+import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
+
 
 
 export default function Step2({ setStepSelected, frequency, setFrequency, plan, setPlan, lightMode }) {
+
+
+    const CardWrapper = styled(motion.div)`
+    border-radius: 20px;
+    backdrop-filter: blur(3px) brightness(120%);
+    `;
 
     return(
 
@@ -11,10 +20,11 @@ export default function Step2({ setStepSelected, frequency, setFrequency, plan, 
 
                 <div className="step-texts">
                     <h3 className={` ${lightMode ? "light" : ""}`}>Select your plan</h3>
-                    <p>You have the option of monthly or yearly billing.</p>
+                    <p className={`${lightMode ? "light" : ""}`}>You have the option of monthly or yearly billing.</p>
                 </div>
 
                 <div className="step2-cards d-flex gap-2">
+          
                     <div id="arcade" className={`stp-card d-flex flex-column justify-content-between ${plan === "arcade" ? "selected" : ""}
                     ${lightMode ? "light" : ""}`} onClick={(e) => setPlan(e.currentTarget.id)}>
                         <div id="arcade" className="img-card">
@@ -30,6 +40,7 @@ export default function Step2({ setStepSelected, frequency, setFrequency, plan, 
                             }
                         </div>
                     </div>
+
 
                     <div id="advanced" className={`stp-card d-flex flex-column justify-content-between ${plan === "advanced" ? "selected" : ""}
                      ${lightMode ? "light" : ""}`} onClick={(e) => setPlan(e.currentTarget.id)}>
@@ -69,11 +80,13 @@ export default function Step2({ setStepSelected, frequency, setFrequency, plan, 
                     <div className={`choice-btn d-flex align-items-center
                     ${frequency === "monthly" ? 'justify-content-left' : "justify-content-end" }
                     `}>
+
+                    <div className={`choice-btn d-flex align-items-center ${frequency === "yearly" ? "yearly" : ""}`}>
                         <div className="slide-choice-btn"></div>
+                        </div>
                     </div>
+                    
                     <h6 className={`h6-freq ${frequency === "monthly" ? "" : "select"}`} onClick={() => setFrequency("yearly")}>Yearly</h6>
-
-
                 </div>
 
             </div>

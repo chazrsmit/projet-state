@@ -8,7 +8,7 @@ import Step4 from './assets/components/step4/Step4'
 import Confirm from './assets/components/confirm/Confirm'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoon } from '@fortawesome/free-solid-svg-icons';
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
 
@@ -91,7 +91,11 @@ function App() {
   return (
 <>
         <div className="d-flex toggle-icon mb-2" onClick={handleLight}>
-            <FontAwesomeIcon className={`faMoon ${lightMode ? "light" : ""} `} icon={faMoon} />
+          {!lightMode &&
+            <FontAwesomeIcon icon={faMoon} />
+          }
+          {lightMode &&
+          <FontAwesomeIcon icon={faSun} className="faSun" />}
         </div>
 
         <div className={`div-all ${lightMode ? "light" : ""}`}>

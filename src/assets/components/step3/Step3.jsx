@@ -15,11 +15,11 @@ export default function Step3({ setStepSelected, isChecked, setIsChecked, lightM
 
                 <div className="step-texts">
                     <h3 className={` ${lightMode ? "light" : ""}`}>Pick add-ons</h3>
-                    <p>Add-ons help enhance your gaming experience.</p>
+                    <p className={`${lightMode ? "light" : ""}`}>Add-ons help enhance your gaming experience.</p>
                 </div>
                 <div className="addons-choice d-flex flex-column gap-2">
 
-                    <div className={`addon d-flex justify-content-between p-2 rounded-2 flex-grow-1 px-3 ${isChecked.includes("online") ? "selected" : ""}`}>
+                    <div className={`addon d-flex justify-content-between p-2 rounded-2 flex-grow-1 px-3 ${isChecked.includes("online") ? "selected" : ""} ${lightMode ? "light" : ""}`}>
                         <div className="d-flex gap-3">
                             <input type="checkbox" id="online" name="online"
                             // ne pas oublier d'updater l'attribuer "checked" (on vérifie que son id se trouve bien dans l'array contenant les addons):
@@ -38,16 +38,16 @@ export default function Step3({ setStepSelected, isChecked, setIsChecked, lightM
                                 }}
                             />
                             <div>
-                                <h6>Online services</h6>
-                                <p>Access to multiplayer games</p>
+                                <h6 className={`${lightMode ? "light" : ""}`}>Online services</h6>
+                                <p className={`${lightMode ? "light" : ""}`}>Access to multiplayer games</p>
                             </div>
                         </div>
                         <div className='d-flex align-items-center'>
-                            <h6 className="addon-price">+$1/yr</h6>
+                            <h6 className={`addon-price ${lightMode ? "light" : ""}`}>+$1/yr</h6>
                         </div>
                     </div>
 
-                    <div className={`addon d-flex justify-content-between p-2 rounded-2 flex-grow-1 px-3 ${isChecked.includes("larger") ? "selected" : ""}`}>
+                    <div className={`addon d-flex justify-content-between p-2 rounded-2 flex-grow-1 px-3 ${isChecked.includes("larger") ? "selected" : ""} ${lightMode ? "light" : ""}`}>
                         <div className="d-flex gap-3">
                             <input type="checkbox" id="larger" name="larger"
                             checked={isChecked.includes("larger")}
@@ -62,16 +62,16 @@ export default function Step3({ setStepSelected, isChecked, setIsChecked, lightM
                             }}
                             />
                             <div>
-                                <h6>Larger storage  </h6>
-                                <p>Extra 1TB of cloud save</p>
+                                <h6 className={`${lightMode ? "light" : ""}`}>Larger storage  </h6>
+                                <p className={`${lightMode ? "light" : ""}`}>Extra 1TB of cloud save</p>
                             </div>
                         </div>
                         <div className='d-flex align-items-center'>
-                            <h6 className="addon-price">+$2/yr</h6>
+                            <h6 className={`addon-price ${lightMode ? "light" : ""}`}>+$2/yr</h6>
                         </div>
                     </div>
 
-                    <div className={`addon d-flex justify-content-between p-2 rounded-2 flex-grow-1 px-3 ${isChecked.includes("custom") ? "selected" : ""}`}>
+                    <div className={`addon d-flex justify-content-between p-2 rounded-2 flex-grow-1 px-3 ${isChecked.includes("custom") ? "selected" : ""} ${lightMode ? "light" : ""}`}>
                         <div className="d-flex gap-3">
                             <input type="checkbox" id="custom" name="custom"
                             checked={isChecked.includes("custom")}
@@ -85,12 +85,12 @@ export default function Step3({ setStepSelected, isChecked, setIsChecked, lightM
                             }}
                             />
                             <div>
-                                <h6>Customizable profile</h6>
-                                <p>Custom theme on your profile</p>
+                                <h6 className={`${lightMode ? "light" : ""}`}   >Customizable profile</h6>
+                                <p className={`${lightMode ? "light" : ""}`}>Custom theme on your profile</p>
                             </div>
                         </div>
                         <div className='d-flex align-items-center'>
-                            <h6 className="addon-price">+$2/yr</h6>
+                            <h6 className={`addon-price ${lightMode ? "light" : ""}`}>+$2/yr</h6>
                         </div>
                     </div>
 
@@ -100,8 +100,8 @@ export default function Step3({ setStepSelected, isChecked, setIsChecked, lightM
 
             <div className="step2-part2">
                 <div className="div-button d-flex justify-content-between">
-                    <button className="btn-prev" onClick={() => setStepSelected("step2")}>Previous</button>
-                    <button className="btn-bleu" onClick={() => setStepSelected("step4")}>Next step</button>
+                    <button className={`btn-prev ${lightMode ? "light" : ""}`} onClick={() => setStepSelected("step2")}>Go back</button>
+                    <button className={`btn-bleu ${lightMode ? "light" : ""}`} onClick={() => setStepSelected("step4")}>Next step</button>
                 </div>
             </div>
 

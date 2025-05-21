@@ -11,7 +11,7 @@ export default function Step1({ setStepSelected, nom, setNom, email, setEmail, p
 
                 <div className="step-texts">
                     <h3 className={` ${lightMode ? "light" : ""}`}>Personal info</h3>
-                    <p>Please provide your name, phone number and email adress.</p>
+                    <p className={`${lightMode ? "light" : ""}`}>Please provide your name, phone number and email adress.</p>
                 </div>
 
                 <form>

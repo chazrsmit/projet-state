@@ -20,9 +20,14 @@
     border: 2px solid #bf9cbe;
 }
 
+
 .stp-card.selected.light {
     background-color: #cde0ff;
     border: 2px solid white;
+}
+
+.stp-card.selected.light:hover {
+    border: 2px solid #bf9cbe;
 }
 
 h6 {
@@ -44,6 +49,7 @@ h6 {
     width: 35px;
     border-radius: 20px;
     padding: 2px;
+    position: relative;
 }
 
 .choice-freq {
@@ -61,6 +67,12 @@ h6 {
     width: 14px;
     background-color: white;
     border-radius: 50%;
+    position: absolute;
+    transition: transform 0.3s ease;
+}
+
+.choice-btn.yearly .slide-choice-btn {
+  transform: translateX(14px); /* adjust according to width */
 }
 
 .h6-plan {
@@ -72,6 +84,7 @@ h6 {
    cursor: pointer;
    color: hsl(231, 11%, 63%);
 }
+
 
 .h6-freq.select {
     color:  hsl(213, 96%, 18%);

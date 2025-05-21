@@ -12,6 +12,10 @@
     border: 2px solid #bf9cbe;
 }
 
+.addon.selected.light {
+    background-color: hsl(214, 90%, 16%);
+}
+
 .addon-price {
     color: #61389a;
     font-size: clamp(10px, 1vw + 0.3rem, 13px);
@@ -23,4 +27,12 @@
 
 .addon h6 {
     font-size: clamp(12px, 1vw + 0.3rem, 14px);
+}
+
+.addon h6.light {
+    color: white;
+}
+
+.addon-price.light {
+    color:  #bf9cbe !important;
 }

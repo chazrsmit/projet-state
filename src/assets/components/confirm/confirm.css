@@ -28,3 +28,16 @@
     color: hsl(243, 100%, 62%);
     cursor: pointer;
 }
+
+.confirmation span.light {
+    /* color: #cde0ff; */
+    color: white;
+}
+
+.confirmation span:nth-of-type(2):hover.light {
+    color: #bf9cbe;
+}
+
+p.light {
+    color: #cadbf5;
+}
