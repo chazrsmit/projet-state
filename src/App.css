@@ -30,7 +30,7 @@ body {
   align-items: center;
   height: 100vh;
   font-size: 18px;
-  transition: all 0.2s;
+  transition: all 0.1s;
 }
 
 .section-all {
