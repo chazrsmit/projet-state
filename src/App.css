@@ -42,7 +42,7 @@ body {
 .div-all {
   background-color: white;
   border-radius: 10px;
-  width: 80vw;
+  width: 90vw;
   height: 90vh;
   display: flex;
   flex-direction: column;
