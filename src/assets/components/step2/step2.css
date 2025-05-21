@@ -60,4 +60,6 @@ h6 {
     color:  hsl(213, 96%, 18%);
 }
 
-/* Très petits écrans */
+.infos-plan p {
+    font-size:  clamp(10px, 1vw, 14px);
+}

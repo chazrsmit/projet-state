@@ -1,10 +1,20 @@
 .div-step1 {
-    padding: 12px;
+    padding: clamp(8px, 1vw, 12px);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+}
+
+.step-texts {
+    padding-top: 10px;
+}
+
+@media (min-width: 1024px) {
+    .step-texts {
+        padding-top: 0px;
+    }
 }
 
 .div-step1 h3 {
@@ -43,10 +53,10 @@ input[placeholder]:focus {
 
 @media (min-width: 1024px) {
     .div-step1 {
-        padding-left: 60px;
-        padding-right: 60px;
+        padding-left: 25px;
+        padding-right: 15px;
         padding-top: 50px;
-        padding-bottom: 30px;
+        /* padding-bottom: 30px; */
         /* border: 1px solid red; */
     }
 }

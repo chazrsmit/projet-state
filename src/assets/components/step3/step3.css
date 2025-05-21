@@ -14,4 +14,13 @@
 
 .addon-price {
     color: #61389a;
+    font-size: clamp(10px, 1vw + 0.3rem, 13px);
+}
+
+.addon p {
+    font-size: clamp(11px, 1vw + 0.3rem, 12px);
+}
+
+.addon h6 {
+    font-size: clamp(12px, 1vw + 0.3rem, 14px);
 }

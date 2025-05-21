@@ -14,7 +14,7 @@ export default function Step1({ setStepSelected, nom, setNom, email, setEmail, p
                     <p>Please provide your name, phone number and email adress.</p>
                 </div>
 
-                <form className="">
+                <form>
                     <label htmlFor="name">Your name is: {nom}</label><br/>
                     {/* on dit que lorsque l'on change la valeur de cet input, on change l'état de notre variable nom (car la valeur de cet input est le nom entré par l'utilisateur). On utilise un e.target pour bien sélectionner cet input. */}
                     <input className="w-100" type="text" id="nom" value={nom}  onChange={(e) => setNom(e.target.value)} placeholder='Vingt-six' /><br/>
