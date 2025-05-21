@@ -13,7 +13,7 @@ p, h6 {
 
 .div-step1 p {
   color : hsl(231, 11%, 63%);
-  font-size: 14px;
+  font-size: clamp(12px, 0.9rem, 15px);
   font-weight: 500;
 }
 
