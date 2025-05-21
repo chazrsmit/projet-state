@@ -7,6 +7,8 @@
     height: 100%;
 }
 
+
+
 .step-texts {
     padding-top: 10px;
 }
@@ -32,7 +34,7 @@ form {
 
 label {
     color:  hsl(213, 96%, 18%);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: bold;
 }
 
@@ -45,17 +47,17 @@ input {
     outline: none;
     border: 2px solid hsl(229, 24%, 87%);
     padding: 8px;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 input::placeholder {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: hsl(231, 11%, 63%);
 }
 
 /* Quand l'user commence à taper */
 input[placeholder] {
-    font-size: 0.9rem;
+    font-size: 1rem;
     transition: all 0.2s;
 }
 

@@ -17,11 +17,11 @@ p, h6 {
   font-weight: 500;
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   .div-step1 p {
-    font-size: 13px;
+    font-size: 14px;
   }
-}
+} */
 
 body {
   background-color: hsl(217, 100%, 97%);
