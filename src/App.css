@@ -133,7 +133,7 @@ body {
 @media (min-width: 1024px) {
   .div-all {
     width: 50vw;
-    height: 60vh;
+    height: 58vh;
     flex-direction: row;
   }
 }
