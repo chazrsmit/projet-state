@@ -1,4 +1,5 @@
 import './confirm.css'
+import img from "../../../../public/thankyou.svg";
 
 export default function Confirm({ nom, plan, lightMode }) {
 
@@ -6,7 +7,7 @@ export default function Confirm({ nom, plan, lightMode }) {
 
         <div className="div-step1 confirmation justify-content-center align-items-center gap-4">
 
-            <img src="../../../../public/thankyou.svg" alt="" />
+            <img src={img} alt="" />
             <div className="d-flex flex-column align-items-center justify-content-center">
                 <h2 className={` ${lightMode ? "light" : ""}`}>Thank you !</h2>
                 <p className={`text-center ${lightMode ? "light" : ""}`}>Thank you {nom} for confirming your subscription to our <span className={`${lightMode ? "light" : ""}`}>{plan} plan</span> ! We hope you have fun using our platform. If you ever need support, please feel free to email us at <span className={`${lightMode ? "light" : ""}`}>support@email.com</span>.</p>
