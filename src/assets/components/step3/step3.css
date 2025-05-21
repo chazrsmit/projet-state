@@ -33,7 +33,7 @@
 }
 
 .addon h6 {
-    font-size: clamp(12px, 1vw + 0.3rem, 14px);
+    font-size: clamp(13px, 1vw + 0.3rem, 15px);
 }
 
 .addon h6.light {
