@@ -1,6 +1,7 @@
 import './step2.css'
-import styled from '@emotion/styled';
-import { motion } from 'framer-motion';
+import img1 from "../../../../public/arcade.svg";
+import img2 from "../../../../public/advenced.svg";
+import img3 from "../../../../public/pro.svg";
 
 
 
@@ -28,7 +29,7 @@ export default function Step2({ setStepSelected, frequency, setFrequency, plan, 
                     <div id="arcade" className={`stp-card d-flex flex-column justify-content-between ${plan === "arcade" ? "selected" : ""}
                     ${lightMode ? "light" : ""}`} onClick={(e) => setPlan(e.currentTarget.id)}>
                         <div id="arcade" className="img-card">
-                            <img src="../../../../public/arcade.svg" alt="" />
+                            <img src={img1} alt="" />
                         </div>
                         <div id="arcade" className="infos-plan">
                             <h6 className={`h6-plan ${lightMode ? "light" : ""} ${plan === "arcade" ? "selected" : ""}`}>Arcade</h6>
@@ -45,7 +46,7 @@ export default function Step2({ setStepSelected, frequency, setFrequency, plan, 
                     <div id="advanced" className={`stp-card d-flex flex-column justify-content-between ${plan === "advanced" ? "selected" : ""}
                      ${lightMode ? "light" : ""}`} onClick={(e) => setPlan(e.currentTarget.id)}>
                         <div id="advanced" className="img-card">
-                            <img src="../../../../public/advenced.svg" alt="" />
+                            <img src={img2} alt="" />
                         </div>
                         <div id="advanced" className="infos-plan">
                             <h6 className={`h6-plan ${lightMode ? "light" : ""} ${plan === "advanced" ? "selected" : ""}`}>Advanced</h6>
@@ -61,7 +62,7 @@ export default function Step2({ setStepSelected, frequency, setFrequency, plan, 
                     <div id="pro" className={`stp-card d-flex flex-column justify-content-between ${plan === "pro" ? "selected" : ""} 
                     ${lightMode ? "light" : ""}`} onClick={(e) => setPlan(e.currentTarget.id)}>
                         <div id="pro" className="img-card">
-                            <img src="../../../../public/pro.svg" alt="" />
+                            <img src={img3} alt="" />
                         </div>
                         <div id="pro" className="infos-plan">
                             <h6 className={`h6-plan ${lightMode ? "light" : ""} ${plan === "pro" ? "selected" : ""}`}>Pro</h6>
@@ -85,7 +86,7 @@ export default function Step2({ setStepSelected, frequency, setFrequency, plan, 
                         <div className="slide-choice-btn"></div>
                         </div>
                     </div>
-                    
+
                     <h6 className={`h6-freq ${frequency === "monthly" ? "" : "select"}`} onClick={() => setFrequency("yearly")}>Yearly</h6>
                 </div>
 
