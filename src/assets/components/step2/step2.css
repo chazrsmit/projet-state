@@ -48,6 +48,7 @@ h6 {
 
 .h6-plan {
     color: hsl(243, 100%, 62%);
+    font-size: clamp(12px, 1vw + 0.1rem, 16px);
 }
 
 .h6-freq {
@@ -58,3 +59,5 @@ h6 {
 .h6-freq.select {
     color:  hsl(213, 96%, 18%);
 }
+
+/* Très petits écrans */
