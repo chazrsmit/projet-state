@@ -19,7 +19,7 @@ export default function Step3({ setStepSelected, isChecked, setIsChecked }) {
                 </div>
                 <div className="addons-choice d-flex flex-column gap-2">
 
-                    <div className="addon d-flex justify-content-between p-2 rounded-2 flex-grow-1 px-3">
+                    <div className={`addon d-flex justify-content-between p-2 rounded-2 flex-grow-1 px-3 ${isChecked.includes("online") ? "selected" : ""}`}>
                         <div className="d-flex gap-3">
                             <input type="checkbox" id="online" name="online"
                             // ne pas oublier d'updater l'attribuer "checked" (on vérifie que son id se trouve bien dans l'array contenant les addons):
@@ -43,11 +43,11 @@ export default function Step3({ setStepSelected, isChecked, setIsChecked }) {
                             </div>
                         </div>
                         <div className='d-flex align-items-center'>
-                            <h6>+$1/yr</h6>
+                            <h6 className="addon-price">+$1/yr</h6>
                         </div>
                     </div>
 
-                    <div className="addon d-flex justify-content-between p-2 rounded-2 flex-grow-1 px-3">
+                    <div className={`addon d-flex justify-content-between p-2 rounded-2 flex-grow-1 px-3 ${isChecked.includes("larger") ? "selected" : ""}`}>
                         <div className="d-flex gap-3">
                             <input type="checkbox" id="larger" name="larger"
                             checked={isChecked.includes("larger")}
@@ -67,11 +67,11 @@ export default function Step3({ setStepSelected, isChecked, setIsChecked }) {
                             </div>
                         </div>
                         <div className='d-flex align-items-center'>
-                            <h6>+$2/yr</h6>
+                            <h6 className="addon-price">+$2/yr</h6>
                         </div>
                     </div>
 
-                    <div className="addon d-flex justify-content-between p-2 rounded-2 flex-grow-1 px-3">
+                    <div className={`addon d-flex justify-content-between p-2 rounded-2 flex-grow-1 px-3 ${isChecked.includes("custom") ? "selected" : ""}`}>
                         <div className="d-flex gap-3">
                             <input type="checkbox" id="custom" name="custom"
                             checked={isChecked.includes("custom")}
@@ -90,7 +90,7 @@ export default function Step3({ setStepSelected, isChecked, setIsChecked }) {
                             </div>
                         </div>
                         <div className='d-flex align-items-center'>
-                            <h6>+$2/yr</h6>
+                            <h6 className="addon-price">+$2/yr</h6>
                         </div>
                     </div>
 

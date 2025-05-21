@@ -1,7 +1,17 @@
 .addon {
-    border: 1px solid hsl(229, 24%, 87%);
+    border: 2px solid hsl(229, 24%, 87%);
+    transition: all 0.2s;
 }
 
 .addon:hover {
-    border-color: hsl(243, 100%, 62%);
+    border: 2px solid #bf9cbe;
+}
+
+.addon.selected {
+    background-color:  hsl(231, 100%, 99%);
+    border: 2px solid #bf9cbe;
+}
+
+.addon-price {
+    color: #61389a;
 }

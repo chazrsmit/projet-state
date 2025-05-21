@@ -18,7 +18,7 @@ export default function Step4({ setStepSelected, isChecked, plan, frequency, ful
                     {/* Sélection de base */}
                         <div className="selection d-flex justify-content-between">
                             <div>
-                                <h6 style={{textTransform: 'capitalize'}}>{plan}({frequency})</h6>
+                                <h6 style={{textTransform: 'capitalize'}}>{plan} ({frequency})</h6>
                                 <p onClick={() => setStepSelected("step2")}>Change</p>
                             </div>
                             <div>
@@ -39,7 +39,7 @@ export default function Step4({ setStepSelected, isChecked, plan, frequency, ful
                         </div>
 
                     {/* Add-ons */}
-                        <div className="supp d-flex justify-content-between">
+                        <div className={`supp d-flex justify-content-between ${isChecked.length > 0 ? "border-top border-2 mt-2 pt-1" : ""}`}>
                             <div>
                                 { isChecked.includes("online") &&
                                     <p>Online storage</p>
@@ -69,7 +69,7 @@ export default function Step4({ setStepSelected, isChecked, plan, frequency, ful
                     <div className="total d-flex justify-content-between">
                         <p>Total per month</p>
                     {/* Faire attention à ne pas oublier les parenthèses pour déclencher la fonction qui va effectuer le calcul.  */}
-                        <h5>${fullTotal()}</h5>
+                        <h5 className="h5-total">${fullTotal()}</h5>
                     </div>
 
                 </div>

@@ -3,7 +3,7 @@
     height: 120px;
     padding: 8px;
     border-radius: 10px;
-    border: 1px solid hsl(229, 24%, 87%);
+    border: 2px solid hsl(229, 24%, 87%);
     /* à éventuellement enlever si ça fait des bugs en responsive : */
     min-width: 50px;
     transition: all 0.2s;
@@ -11,14 +11,13 @@
 }
 
 .stp-card:hover {
-    border-color: hsl(243, 100%, 62%);
+    border: 2px solid #bf9cbe;
     transition: all 0.2s;
 }
 
 .stp-card.selected {
     background-color:  hsl(231, 100%, 99%);
-    border-color: hsl(243, 100%, 62%);
-
+    border: 2px solid #bf9cbe;
 }
 
 h6 {
@@ -53,7 +52,7 @@ h6 {
 
 .h6-freq {
    cursor: pointer;
-   color: grey;
+   color: hsl(231, 11%, 63%);
 }
 
 .h6-freq.select {

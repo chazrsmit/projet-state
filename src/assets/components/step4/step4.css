@@ -7,3 +7,12 @@
 .total {
     padding: 10px;
 }
+
+.total h5 {
+  color:  hsl(243, 100%, 62%);
+}
+
+.selection p {
+  text-decoration: underline;
+  cursor: pointer;
+}
