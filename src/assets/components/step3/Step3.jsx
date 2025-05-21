@@ -74,7 +74,6 @@ export default function Step3({ setStepSelected, isChecked, setIsChecked }) {
                     <div className="addon d-flex justify-content-between p-2 rounded-2 flex-grow-1 px-3">
                         <div className="d-flex gap-3">
                             <input type="checkbox" id="custom" name="custom"
-                            // pour que l'élément reste checked, on doit lier l'attribut checked à son id se trouvant dans l'array isChecked :
                             checked={isChecked.includes("custom")}
                             onChange={(e) => {
                             const { id, checked } = e.target;
@@ -100,9 +99,9 @@ export default function Step3({ setStepSelected, isChecked, setIsChecked }) {
             </div>
 
             <div className="step2-part2">
-                <div className="div-button border d-flex justify-content-between">
-                    <button onClick={() => setStepSelected("step2")}>Previous</button>
-                    <button onClick={() => setStepSelected("step4")}>Next step</button>
+                <div className="div-button d-flex justify-content-between">
+                    <button className="btn-prev" onClick={() => setStepSelected("step2")}>Previous</button>
+                    <button className="btn-bleu" onClick={() => setStepSelected("step4")}>Next step</button>
                 </div>
             </div>
 

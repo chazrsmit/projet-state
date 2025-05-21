@@ -76,9 +76,9 @@ export default function Step2({ setStepSelected, frequency, setFrequency, plan, 
             </div>
 
             <div className="step2-part2">
-                <div className="div-button border d-flex justify-content-between">
-                    <button onClick={() => setStepSelected("step1")}>Previous</button>
-                    <button onClick={() => setStepSelected("step3")}>Next step</button>
+                <div className="div-button d-flex justify-content-between">
+                    <button className="btn-prev" onClick={() => setStepSelected("step1")}>Go back</button>
+                    <button className="btn-bleu" onClick={() => setStepSelected("step3")}>Next step</button>
                 </div>
             </div>
 

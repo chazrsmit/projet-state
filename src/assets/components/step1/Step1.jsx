@@ -22,7 +22,7 @@ export default function Step1({ setStepSelected, nom, setNom, email, setEmail, p
                 </form>
 
                 <div className="div-button d-flex justify-content-end">
-                    <button onClick={() => setStepSelected("step2")}>Next step</button>
+                    <button className="btn-bleu" onClick={() => setStepSelected("step2")}>Next step</button>
                 </div>
 
         </div>

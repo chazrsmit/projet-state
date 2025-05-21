@@ -69,7 +69,7 @@ export default function Step4({ setStepSelected, isChecked, plan, frequency, ful
                     <div className="total d-flex justify-content-between">
                         <p>Total per month</p>
                     {/* Faire attention à ne pas oublier les parenthèses pour déclencher la fonction qui va effectuer le calcul.  */}
-                        <h5>{fullTotal()}</h5>
+                        <h5>${fullTotal()}</h5>
                     </div>
 
                 </div>
@@ -77,9 +77,9 @@ export default function Step4({ setStepSelected, isChecked, plan, frequency, ful
             </div>
 
             <div className="step2-part2">
-                <div className="div-button border d-flex justify-content-between">
-                    <button onClick={() => setStepSelected("step3")}>Previous</button>
-                    <button onClick={() => setStepSelected("confirm")}>Confirm</button>
+                <div className="div-button d-flex justify-content-between">
+                    <button className="btn-prev" onClick={() => setStepSelected("step3")}>Previous</button>
+                    <button className="btn-bleu" onClick={() => setStepSelected("confirm")}>Confirm</button>
                 </div>
             </div>
 

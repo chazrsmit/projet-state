@@ -14,6 +14,7 @@ function App() {
   const [phone, setPhone] = useState()
   const [frequency, setFrequency] = useState("monthly")
   const [plan, setPlan] = useState("arcade")
+  // Array contenant les addons (attention à bien créer un array, car plusieurs addons peuvent être sélectionnés simultanément) :
   const [isChecked, setIsChecked] = useState([])
 
   // // CALCUL DU TOTAL // //
