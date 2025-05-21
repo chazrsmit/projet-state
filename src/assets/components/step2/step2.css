@@ -2,7 +2,7 @@
     flex: 1;
     height: 120px;
     padding: 8px;
-    border-radius: 10px;
+    border-radius: 8px;
     border: 2px solid hsl(229, 24%, 87%);
     /* à éventuellement enlever si ça fait des bugs en responsive : */
     min-width: 50px;

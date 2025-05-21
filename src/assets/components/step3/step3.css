@@ -1,7 +1,7 @@
 .addon {
     border: 2px solid hsl(229, 24%, 87%);
     transition: all 0.2s;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .addon:hover {
