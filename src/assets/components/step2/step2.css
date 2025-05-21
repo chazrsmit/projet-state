@@ -45,8 +45,8 @@ h6 {
 
 .choice-btn {
     background-color: hsl(213, 96%, 18%);
-    height: 18px;
-    width: 35px;
+    height: 20px;
+    width: 40px;
     border-radius: 20px;
     padding: 2px;
     position: relative;
@@ -63,8 +63,8 @@ h6 {
 }
 
 .slide-choice-btn {
-    height: 14px;
-    width: 14px;
+    height: 14.5px;
+    width: 14.5px;
     background-color: white;
     border-radius: 50%;
     position: absolute;
@@ -72,7 +72,7 @@ h6 {
 }
 
 .choice-btn.yearly .slide-choice-btn {
-  transform: translateX(14px); /* adjust according to width */
+    transform: translateX(17px);
 }
 
 .h6-plan {
