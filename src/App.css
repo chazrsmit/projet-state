@@ -73,6 +73,10 @@ body {
   background-color: hsl(213, 95%, 24%);
 }
 
+#btn-confirm:hover {
+  background-color: hsl(243, 100%, 62%);
+}
+
 .btn-prev {
   font-size: 0.8rem;
   border: none;

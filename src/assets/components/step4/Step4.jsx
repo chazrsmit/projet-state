@@ -79,7 +79,7 @@ export default function Step4({ setStepSelected, isChecked, plan, frequency, ful
             <div className="step2-part2">
                 <div className="div-button d-flex justify-content-between">
                     <button className="btn-prev" onClick={() => setStepSelected("step3")}>Previous</button>
-                    <button className="btn-bleu" onClick={() => setStepSelected("confirm")}>Confirm</button>
+                    <button id="btn-confirm" className="btn-bleu" onClick={() => setStepSelected("confirm")}>Confirm</button>
                 </div>
             </div>
 

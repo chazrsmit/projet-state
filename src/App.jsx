@@ -5,6 +5,7 @@ import Step1 from './assets/components/step1/Step1'
 import Step2 from './assets/components/step2/Step2'
 import Step3 from './assets/components/step3/Step3'
 import Step4 from './assets/components/step4/Step4'
+import Confirm from './assets/components/confirm/Confirm'
 
 function App() {
 
@@ -91,6 +92,10 @@ function App() {
 
             {stepSelected === "step4" && 
               <Step4 setStepSelected={setStepSelected} isChecked={isChecked} plan={plan} frequency={frequency} fullTotal={fullTotal} />
+            }
+
+            {stepSelected === "confirm" && 
+              <Confirm nom={nom} plan={plan} />
             }
           </div>
 
