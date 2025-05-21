@@ -8,11 +8,6 @@ import img3 from "../../../../public/pro.svg";
 export default function Step2({ setStepSelected, frequency, setFrequency, plan, setPlan, lightMode }) {
 
 
-    const CardWrapper = styled(motion.div)`
-    border-radius: 20px;
-    backdrop-filter: blur(3px) brightness(120%);
-    `;
-
     return(
 
         <div className="div-step1">
